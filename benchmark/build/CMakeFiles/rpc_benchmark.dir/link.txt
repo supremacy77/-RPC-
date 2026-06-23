@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -g -O2 -pthread CMakeFiles/rpc_benchmark.dir/rpc_benchmark.cpp.o CMakeFiles/rpc_benchmark.dir/home/supremacy/myreactor/src/Buffer.cpp.o CMakeFiles/rpc_benchmark.dir/home/supremacy/myreactor/src/rpc/rpc_header.pb.cc.o CMakeFiles/rpc_benchmark.dir/home/supremacy/myreactor/src/math_service.pb.cc.o -o rpc_benchmark  /usr/lib/x86_64-linux-gnu/libprotobuf.so 
