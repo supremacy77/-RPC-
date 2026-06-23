@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package rpc;
+
+// RPC 请求头
+message RpcRequest {
+    string service_name = 1;   // 服务名
+    string method_name  = 2;   // 方法名
+    bytes  args         = 3;   // 序列化后的方法参数
+}
+
+// RPC 响应头
+message RpcResponse {
+    enum ErrorCode {
+        NO_ERROR = 0;
+        WRONG_PROTO = 1;
+        NO_SERVICE = 2;
+        NO_METHOD  = 3;
+        INVALID_ARGUMENT = 4;
+        INTERNAL_ERROR = 5;
+    }
+    ErrorCode error_code = 1;
+    string error_msg      = 2;
+    bytes  result         = 3; // 序列化后的返回值
+}

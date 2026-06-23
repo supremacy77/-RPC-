@@ -1,0 +1,23 @@
+syntax = "proto2";
+package math;
+
+message AddRequest {
+    optional int32 a = 1;
+    optional int32 b = 2;
+}
+message AddResponse {
+    optional int32 sum = 1;
+}
+
+message SubRequest {
+    optional int32 a = 1;
+    optional int32 b = 2;
+}
+message SubResponse {
+    optional int32 diff = 1;
+}
+
+service MathService {
+    rpc Add(AddRequest) returns(AddResponse);
+    rpc Sub(SubRequest) returns(SubResponse);
+}
